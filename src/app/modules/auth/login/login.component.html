@@ -1,0 +1,36 @@
+
+<section>
+  <div class="gap no-gap signin whitish medium-opacity">
+        <div class="bg-image" style="background-image:url(assets/images/logo-compile.png)"></div>
+        <div class="container">
+          <div class="row">
+                <div class="col-lg-8">
+                    <div class="big-ad">
+                        <h1>Welcome to LegalTax</h1>
+                        <p>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis incidunt illum, quae earum veritatis assumenda corrupti ex minima maxime voluptate, dolorem veniam totam harum dolorum consectetur iusto animi rerum autem.                        </p>
+                        
+                
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="we-login-register">
+                        <div class="form-title">
+                            <i class="fa-regular fa-right-to-bracket"></i> login
+                        </div>
+                        <form class="we-form" (ngSubmit)="onLogin()" [formGroup]="loginForm" autocomplete="off">
+                            <input formControlName="email"  type="email" placeholder="Email" class="text-sky-950">
+                            <input formControlName="password" type="password" placeholder="Password" class="text-sky-950">
+                            <input formControlName="rememberme" type="checkbox"><label>remember me</label>
+                            <button  type="submit" data-ripple="">sign in</button>
+                            <a class="forgot underline"  routerLink="/home" title="">forgot password?</a>
+                        </form>
+
+                        <span>don't have an account? <a class="we-account underline" routerLink="/auth/register" title="">register now</a></span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>

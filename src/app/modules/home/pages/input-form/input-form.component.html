@@ -1,0 +1,273 @@
+<div class="flow-root">
+  <div class="grid grid-cols-2">
+      <!-- Contenido de la primera columna -->
+      <div class="text-center p-6" style="background-color: #525258;">
+        <h2 class="text-2xl font-bold mb-4 text-white">¡COMENCEMOS!</h2>
+        <p class="text-gray-200 " style="color: #DE9E39;">Esta información nos permite calcular tu margen de solvencia de forma personalizada y precisa.</p>
+      </div><br>
+      <div class="-my-8 divide-y divide-gray-100 p-4 overflow-y-auto" style="background-color: #525258;">
+          <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full" open>
+              <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+                  <h2 class="text-lg font-medium text-white">Gestion</h2>
+              </summary>
+
+              <form [formGroup]="financialForm" (ngSubmit)="onSubmit()" class="p-4 space-y-6 w-full">
+                  <!-- Contenido del formulario -->
+                  <!-- Datos de Liquidez -->
+                  <div formGroupName="liquidezData" class="space-y-4">
+                      <h4 class="text-lg font-medium text-white">Ingresa los datos</h4>
+                      <div>
+                          <label for="activoCorriente" class="block font-medium text-white">Ventas Netas</label>
+                          <input formControlName="activoCorriente" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                          <label for="pasivoCorriente" class="block font-medium text-white">Patrimonio Liquido</label>
+                          <input formControlName="pasivoCorriente" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                          <label for="disponible" class="block font-medium text-white">Activo Total</label>
+                          <input formControlName="disponible" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                          <label for="inversionesTemporales" class="block font-medium text-white">Activo Corriente</label>
+                          <input formControlName="inversionesTemporales" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                          <label for="deudores" class="block font-medium text-white">Pasivo Corriente</label>
+                          <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                          <label for="deudores" class="block font-medium text-white">Cuentas Por Cobrar Clientes</label>
+                          <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                      </div>
+                  </div>
+              </form>
+          </details>
+
+          <!-- Otros detalles o contenido que desees en la primera columna -->
+
+
+          <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full" open>
+            <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+                <h2 class="text-lg font-medium text-white">Liquidez</h2>
+            </summary>
+
+            <form [formGroup]="financialForm" (ngSubmit)="onSubmit()" class="p-4 space-y-6 w-full">
+                <!-- Contenido del formulario -->
+                <!-- Datos de Liquidez -->
+                <div formGroupName="liquidezData" class="space-y-4">
+                    <h4 class="text-lg font-medium text-white">Ingresa los datos</h4>
+                    <div>
+                        <label for="activoCorriente" class="block font-medium text-white">Activo Corriente</label>
+                        <input formControlName="activoCorriente" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                        <label for="pasivoCorriente" class="block font-medium text-white">Pasivo Corriente</label>
+                        <input formControlName="pasivoCorriente" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                        <label for="disponible" class="block font-medium text-white">Disponible</label>
+                        <input formControlName="disponible" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                        <label for="inversionesTemporales" class="block font-medium text-white">Inversiones Temporales</label>
+                        <input formControlName="inversionesTemporales" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                        <label for="deudores" class="block font-medium text-white">Deudores</label>
+                        <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                    </div>
+                </div>
+            </form>
+        </details>
+        <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full" open>
+          <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+              <h2 class="text-lg font-medium text-white">Rentabilidad</h2>
+          </summary>
+
+          <form [formGroup]="financialForm" (ngSubmit)="onSubmit()" class="p-4 space-y-6 w-full">
+              <!-- Contenido del formulario -->
+              <!-- Datos de Liquidez -->
+              <div formGroupName="liquidezData" class="space-y-4">
+                  <h4 class="text-lg font-medium text-white">Ingresa los datos</h4>
+                  <div>
+                      <label for="activoCorriente" class="block font-medium text-white">Utilidad Bruta</label>
+                      <input formControlName="activoCorriente" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                      <label for="pasivoCorriente" class="block font-medium text-white">Ventas Netas</label>
+                      <input formControlName="pasivoCorriente" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                      <label for="disponible" class="block font-medium text-white">Descuentos</label>
+                      <input formControlName="disponible" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                      <label for="inversionesTemporales" class="block font-medium text-white"> Utilidad Operacional</label>
+                      <input formControlName="inversionesTemporales" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                      <label for="deudores" class="block font-medium text-white">Utilidad Neta</label>
+                      <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                  </div>
+              </div>
+          </form>
+      </details>
+      <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full" open>
+        <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+            <h2 class="text-lg font-medium text-white">Solvencia</h2>
+        </summary>
+
+        <form [formGroup]="financialForm" (ngSubmit)="onSubmit()" class="p-4 space-y-6 w-full">
+            <!-- Contenido del formulario -->
+            <!-- Datos de Liquidez -->
+            <div formGroupName="liquidezData" class="space-y-4">
+                <h4 class="text-lg font-medium text-white">Ingresa los datos</h4>
+                <div>
+                    <label for="activoCorriente" class="block font-medium text-white">Total Pasivo</label>
+                    <input formControlName="activoCorriente" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                    <label for="pasivoCorriente" class="block font-medium text-white">Total Activo</label>
+                    <input formControlName="pasivoCorriente" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                    <label for="disponible" class="block font-medium text-white">Pasivo Corriente</label>
+                    <input formControlName="disponible" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                    <label for="inversionesTemporales" class="block font-medium text-white">Pasivo Total</label>
+                    <input formControlName="inversionesTemporales" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                    <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+                    <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+
+                    <label for="deudores" class="block font-medium text-white">Patrimonio</label>
+                    <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+            </div>
+        </form>
+    </details>
+      
+    <div class="text-center mt-8">
+      <br>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" style="background-color: #84252D;">Calcular</button>
+      <p class="text-gray-700 mt-4 text-white" >Tus datos están seguros con nosotros y serán utilizados exclusivamente con este propósito. ¡Gracias por tu colaboración!</p>
+    </div>
+    
+
+      </div>
+
+      <!-- Contenido de la segunda columna -->
+      <div class="-my-40 divide-y divide-gray-100  overflow-hidden" >
+        <!-- Contenido para la segunda columna -->
+        <div style="background-color: #525258; width: 100vw; display: flex; align-items: center;" >
+            <!-- Botón para descargar PDF -->
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" style="background-color: #525258;">
+                Descargar PDF
+            </button>
+        </div>
+        <div class="text-black p-4">
+            <h2>¡Felicidades!</h2>
+            <p>Aquí están los resultados de tu cálculo de margen de solvencia. Basado en la información proporcionada, hemos generado un análisis detallado de tu situación financiera.</p>
+        </div>
+        <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full  p-4" open   style="background-color:white;">
+            <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+                <h2 class="text-lg font-medium text-black">Margen de Solvencia</h2>
+            </summary>
+    
+            <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+            <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+    
+            <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+            <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+    
+            <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+            <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+    
+            <div>Gráfica</div>
+    
+        </details>
+
+
+        <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full  p-4" open>
+          <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+              <h2 class="text-lg font-medium text-black">Rentabilidad</h2>
+          </summary>
+  
+          <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+          <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+  
+          <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+          <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+  
+          <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+          <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+  
+          <div>Gráfica</div>
+  
+      </details>
+
+
+      <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full  p-4" open>
+        <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+            <h2 class="text-lg font-medium text-black">Endeudamiento/Solvencia</h2>
+        </summary>
+
+        <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+        <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+        <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+        <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+        <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+        <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+        <div>Gráfica</div>
+
+    </details>
+
+
+
+    <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full  p-4" open>
+      <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+          <h2 class="text-lg font-medium text-black">Gestion</h2>
+      </summary>
+
+      <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+      <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+      <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+      <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+      <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+      <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+      <div>Gráfica</div>
+
+  </details>
+
+  <details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full  p-4" open>
+    <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+        <h2 class="text-lg font-medium text-black">Liquidez</h2>
+    </summary>
+
+    <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+    <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+    <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+    <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+    <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+    <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+    <div>Gráfica</div>
+
+</details>
+
+
+<details class="group py-8 [&_summary::-webkit-details-marker]:hidden w-full  p-4" open>
+  <summary class="flex cursor-pointer items-center justify-between text-gray-900">
+      <h2 class="text-lg font-medium text-black">Riesgo País</h2>
+  </summary>
+
+  <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+  <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+  <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+  <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+  <label for="deudores" class="block font-medium text-white">Ventas Netas</label>
+  <input formControlName="deudores" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" style="background-color: #D4D3D3;">
+
+  <div>Gráfica</div>
+
+</details>
+    </div>
+    
+  </div>
+</div>

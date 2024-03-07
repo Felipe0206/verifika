@@ -1,0 +1,49 @@
+<div class="www-layout">
+  <section>
+    <div class="gap no-gap signin whitish medium-opacity register">
+      <div class="bg-image" style="background-image:url(assets/images/logo-compile.png)"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="big-ad">
+              <figure><img src="assets/images/favicon.png" alt=""></figure>
+              <h1>Welcome LegalTax</h1>
+              <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt aut soluta molestiae ab a expedita recusandae eos, facilis veritatis. Totam quas cum error praesentium, voluptas vel adipisci deserunt sapiente. Cum?
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="reg-from">
+              <span><i class="fa fa-lock"></i> Create an Account</span>
+              <form class="c-form" (ngSubmit)="registerUser()" autocomplete="off" [formGroup]="registerForm">
+                <div class="row merged10">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input formControlName="nombre" class="mb-2" type="text" placeholder="nombre">
+                    <p *ngIf="notValidatedField('nombre')" class="text-red-600">Username es obligatorio.</p>
+                  </div>
+          
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <input formControlName="email" class="mb-2" type="text" placeholder="Email">
+                    <p *ngIf="notValidatedField('email')" class="text-red-600">Debe ser un email válido.</p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6">
+                    <input formControlName="password" class="mb-2" type="password" placeholder="Password">
+                    <p *ngIf="notValidatedField('password')" class="text-red-600">Debes escribir la contraseña.</p>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6">
+                    <input formControlName="repassword" class="mb-2" type="password" placeholder="Retype Password">
+                    <p *ngIf="notValidatedField('repassword')" class="text-red-600">Las contraseñas deben ser iguales.</p>
+                  </div>
+                  <div>
+                    <button type="submit" class="bg-cyan-800">Signup</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

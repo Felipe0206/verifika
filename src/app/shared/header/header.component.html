@@ -1,0 +1,26 @@
+<div class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div class="flex-shrink-0">
+        <a routerLink="/home">
+          <img src="assets/images/favicombig.png" alt="Logo" class="h-12">
+        </a>
+      </div>
+      <div class="ml-4 flex items-center">
+        <h5 class="text-gray-800 text-lg font-medium mr-4">Jack Carter</h5>
+        <button (click)="toggleMenu()" class="focus:outline-none">
+          <img src="assets/images/resources/admin.jpg" alt="Admin" class="h-10 w-10 rounded-full border-2 border-gray-300">
+        </button>
+        <div class="relative" [class.hidden]="!menuOpen">
+          <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5">
+            <span class="block px-4 py-2 text-sm text-gray-700">User setting </span>
+            <ul class="text-gray-700">
+              <li><a routerLink="user" class="block px-4 py-2 text-sm hover:bg-gray-100">view profile</a></li>
+              <li><a routerLink="/logout" class="block px-4 py-2 text-sm hover:bg-gray-100">log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
